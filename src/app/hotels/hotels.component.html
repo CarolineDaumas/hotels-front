@@ -1,0 +1,47 @@
+<div class="container">
+
+    <div *ngIf="listCities else loading" class="md-6 d-flex flex-wrap">
+        <div *ngFor="let city of listCities">
+            <button class="catList" (click)="getHotelsByCity(city.id)">{{city.name}}
+            </button>
+        </div>
+    </div>
+
+    <ng-container *ngIf="listHotels else loading">
+        <div class="trainingCard">
+            <div *ngFor="let hotel of listHotels">
+                <div class="container-fluid ">
+                    <div class="item product-content">
+                        <!-- Restaurant Item -->
+                        <div>
+                            <!-- Item's image -->
+                            <div>
+                                <img class="img-responsive product-image"
+                                    src="http://localhost:8082/api/download/{{hotel.img}}" alt="">
+                            </div>
+                            <!-- Item details -->
+                            <!-- <div class="item-dtls">
+                                product title
+                                <h4>{{training.name}}</h4>
+                                <p>{{training.description}}</p>
+                                
+                                <span class="price">${{training.price}}</span>
+                            </div> --> -->
+                            <!-- add to cart btn -->
+                            <!-- <div class="ecom">
+                                <input type="number" name="quantity" [(ngModel)]="training.quantity" min="">
+                                <a class="cart-button" (click)="onAddToCart(training)">Add to cart</a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <!-- <button class="btn btn-success" *ngIf="onConnectedAsAdmin()"><a >Ajouter une formation</a></button>   -->
+    </ng-container>
+
+    <ng-template #loading>
+        <div>Aucune donées à afficher !!!</div>
+    </ng-template>
+</div>

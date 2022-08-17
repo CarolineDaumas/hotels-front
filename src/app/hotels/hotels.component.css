@@ -1,0 +1,111 @@
+.trainingCard {
+    margin: 10px auto;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.product-content {
+    border: 1px solid lawngreen;
+    background: #fff;
+    padding: 10px;
+    width: 300px;
+    height: 200px;
+    box-shadow: 10px 10px 5px 0px lawngreen;
+    position: relative;
+    margin: 15px auto;
+    text-align: center;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.product-content:hover {
+    border: 1px solid rgb(251, 149, 169);
+    box-shadow: 10px 10px 5px 0px rgb(251, 149, 169);
+}
+
+.product-image {
+    background-color: #fff;
+    width: 130px;
+}
+
+.cart-button {
+    cursor: pointer;
+    position: relative;
+    background-color: lawngreen;
+    color: #fff;
+    border-radius: 5px;
+    height: 48px;
+    padding: 10px;
+    overflow: hidden
+}
+
+.cart-button:hover {
+    background-color: black;
+}
+
+
+.item:hover {
+    border: 2px solid lawngreen;
+}
+
+.item img {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    border: 1px solid #eee;
+    border-radius: 3px;
+}
+
+.item-dtls h4 {
+    margin-top: 13px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.price {
+    display: block;
+    margin-bottom: 13px;
+    font-size: 25px;
+}
+
+.ecom {
+    justify-content: space-between;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    -webkit-transition: all 0.35s ease-in;
+    -moz-transition: all 0.35s ease-in;
+    -ms-transition: all 0.35s ease-in;
+    -o-transition: all 0.35s ease-in;
+    transition: all 0.35s ease-in;
+}
+
+.ecom input {
+    width: 80px;
+    margin-right: 10px;
+}
+
+.item:hover .ecom {
+    margin-top: -50px;
+}
+
+/* button categorie list */
+.catList {
+    margin: 5px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: darkcyan;
+    border: none;
+
+}
+
+.catList:hover {
+    background-color: lightseagreen;
+    box-shadow: 5px 5px 5px 0px rgb(251, 149, 169);
+}
