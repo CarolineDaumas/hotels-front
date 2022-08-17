@@ -64,7 +64,7 @@ onDetailsHotels(id:any){
 
 
 onSearch(form: FormGroup) {
-  //console.log(form.value);
+this.listHotels=[];
   this.apiService.getTasksBySearch(form.value.newSearch).subscribe({
     next: (data) => this.listHotels = data,
     error: (err) => (this.error = err.message),

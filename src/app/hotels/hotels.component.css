@@ -109,3 +109,7 @@
     background-color: lightseagreen;
     box-shadow: 5px 5px 5px 0px rgb(251, 149, 169);
 }
+
+.row{
+    flex-direction: row-reverse;
+}
