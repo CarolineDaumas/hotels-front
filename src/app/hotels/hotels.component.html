@@ -7,6 +7,20 @@
         </div>
     </div>
 
+    <div class="row">
+        <form class="d-flex mt-3 mb-3 col-4 " role="search" [formGroup]="searchForm" (ngSubmit)="onSearch(searchForm)">
+
+            <input class="form-control me-2" type="search" name="keyword" placeholder="Rechercher" aria-label="Search"
+                formControlName="newSearch">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-search">search</i>
+                  </button>
+            <!-- <button class="btn btn-success" type="submit">
+                <i class="bi bi-search-heart"></i> 
+            </button> -->
+        </form>
+    </div>
+
     <ng-container *ngIf="listHotels else loading">
         <div class="trainingCard">
             <div *ngFor="let hotel of listHotels">
@@ -19,19 +33,7 @@
                                 <img class="img-responsive product-image"
                                     src="http://localhost:8082/api/download/{{hotel.img}}" alt="" (click)="onDetailsHotels(hotel.id)">
                             </div>
-                            <!-- Item details -->
-                            <!-- <div class="item-dtls">
-                                product title
-                                <h4>{{training.name}}</h4>
-                                <p>{{training.description}}</p>
-                                
-                                <span class="price">${{training.price}}</span>
-                            </div> --> -->
-                            <!-- add to cart btn -->
-                            <!-- <div class="ecom">
-                                <input type="number" name="quantity" [(ngModel)]="training.quantity" min="">
-                                <a class="cart-button" (click)="onAddToCart(training)">Add to cart</a>
-                            </div> -->
+                          
                         </div>
                     </div>
                 </div>

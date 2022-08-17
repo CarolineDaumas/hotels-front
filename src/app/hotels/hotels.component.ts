@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { City } from 'src/models/city.model';
 import { Hotel } from 'src/models/hotel.model';
@@ -13,9 +14,17 @@ export class HotelsComponent implements OnInit {
   listHotels: Hotel[]|undefined;
   listCities: City[] | undefined;
   error=null;
+
+  newSearch = "";
+  searchForm: FormGroup;
   
 
-  constructor(private router: Router,private apiService:ApiService) { }
+  constructor(private router: Router,private apiService:ApiService) {
+    this.searchForm = new FormGroup({
+      newSearch: new FormControl(this.newSearch),
+
+    });
+   }
 
   ngOnInit(): void {
     this.getAllHotels();
@@ -52,4 +61,17 @@ export class HotelsComponent implements OnInit {
 onDetailsHotels(id:any){
   this.router.navigateByUrl('details/'+id);
 }
+
+
+onSearch(form: FormGroup) {
+  //console.log(form.value);
+  this.apiService.getTasksBySearch(form.value.newSearch).subscribe({
+    next: (data) => this.listHotels = data,
+    error: (err) => (this.error = err.message),
+    complete: () => (this.error = null),
+  });
+
+
+}
+
 }

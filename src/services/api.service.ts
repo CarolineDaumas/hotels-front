@@ -27,4 +27,8 @@ export class ApiService {
   getHotelById(hotelId: number){
     return this.http.get<Hotel>(environment.host+"/hotels/"+hotelId);
   }
+
+  public getTasksBySearch(name: String) {
+    return this.http.get<Hotel[]>(environment.host + "/research/" + name)
+}
 }
