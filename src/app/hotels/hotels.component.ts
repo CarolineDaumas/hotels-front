@@ -48,4 +48,8 @@ export class HotelsComponent implements OnInit {
     })
 
 }
+
+onDetailsHotels(id:any){
+  this.router.navigateByUrl('details/'+id);
+}
 }

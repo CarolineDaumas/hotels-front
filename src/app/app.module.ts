@@ -5,11 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HotelsComponent } from './hotels/hotels.component';
+import { DetailsHotelComponent } from './details-hotel/details-hotel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HotelsComponent
+    HotelsComponent,
+    DetailsHotelComponent
   ],
   imports: [
     BrowserModule,

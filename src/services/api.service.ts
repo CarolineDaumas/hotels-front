@@ -23,4 +23,8 @@ export class ApiService {
   getHotelsByCityId(cityId:number){
     return this.http.get<Hotel[]>(environment.host+"/cities/"+ cityId + "/hotels");
   }
+
+  getHotelById(hotelId: number){
+    return this.http.get<Hotel>(environment.host+"/hotels/"+hotelId);
+  }
 }
