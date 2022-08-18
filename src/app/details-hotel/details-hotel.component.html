@@ -16,16 +16,17 @@
                             <h4>{{hotel.name}}</h4>
                             <p>{{hotel.address}}</p>
                             <p>{{hotel.city.name}}</p>
+                            <p>Nombre d'étoiles : {{hotel.numberStars}}</p>
                             <p>Nombre de chambres disponibles : {{hotel.availableRooms}}</p>
-                          
                             
                             <span class="price">${{hotel.price}}</span>
                         </div> 
-                        <!-- add to cart btn -->
-                        <!-- <div class="ecom">
-                            <input type="number" name="quantity" [(ngModel)]="training.quantity" min="">
-                            <a class="cart-button" (click)="onAddToCart(training)">Add to cart</a>
-                        </div> -->
+                        <!-- <a class="btn btn-primary" href="/update" role="button">Modifier</a> -->
+                        <div class = "btn-toolbar">
+                            <a class="btn btn-primary" role="button" (click)="onUpdate(hotel.id)">Modifier</a>
+                            <a class="btn btn-primary" role="button" (click)="onDelete(hotel)">Supprimer</a>
+                        </div>
+                        
                     </div>
                 </div>
             </div>

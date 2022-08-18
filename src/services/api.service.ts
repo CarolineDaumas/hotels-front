@@ -31,4 +31,20 @@ export class ApiService {
   public getTasksBySearch(name: String) {
     return this.http.get<Hotel[]>(environment.host + "/research/" + name)
 }
+
+  // upload img
+  public uploadImage(file: File): Observable<Response> {
+    const formData: FormData = new FormData();
+    formData.append('file', file);
+    return this.http.post<any>(environment.host + "/uploadfile", formData)
+  }
+
+  public saveNewHotel(updatedHotel: Hotel){
+    console.log(updatedHotel);
+    return this.http.post<Hotel>(environment.host+"/hotels", updatedHotel);
+  }
+
+  public deleteHotel(hotel:Hotel){
+    return this.http.delete(environment.host+"/hotels/"+hotel.id);
+  }
 }

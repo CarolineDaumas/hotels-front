@@ -74,4 +74,9 @@ this.listHotels=[];
 
 }
 
+onAdd(){
+  this.router.navigateByUrl("add");
+    
+  }
+
 }

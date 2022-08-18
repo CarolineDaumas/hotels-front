@@ -7,12 +7,16 @@ import { AppComponent } from './app.component';
 import { HotelsComponent } from './hotels/hotels.component';
 import { DetailsHotelComponent } from './details-hotel/details-hotel.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UpdateHotelComponent } from './update-hotel/update-hotel.component';
+import { AddHotelComponent } from './add-hotel/add-hotel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HotelsComponent,
-    DetailsHotelComponent
+    DetailsHotelComponent,
+    UpdateHotelComponent,
+    AddHotelComponent
   ],
   imports: [
     BrowserModule,

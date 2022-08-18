@@ -18,12 +18,14 @@
         </form>
     </div>
 
+    <a class="btn btn-primary" role="button" (click)="onAdd()">Ajouter un hôtel</a>
+    
+
     <ng-container >
         <div class="trainingCard">
             <div *ngFor="let hotel of listHotels">
                 <div class="container-fluid ">
                     <div class="item product-content">
-                        <!-- Restaurant Item -->
                         <div>
                             <!-- Item's image -->
                             <div>
