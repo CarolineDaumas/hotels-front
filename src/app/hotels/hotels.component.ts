@@ -13,6 +13,7 @@ import { ApiService } from 'src/services/api.service';
 export class HotelsComponent implements OnInit {
   listHotels: Hotel[]|undefined;
   listCities: City[] | undefined;
+  city: City | undefined;
   error=null;
 
   newSearch = "";
@@ -82,5 +83,20 @@ onAdd(){
 onAddCity(){
   this.router.navigateByUrl("addCity");
 }
+
+// onDeleteCity(){
+//   this.city=this.apiService.
+//   if (confirm("Etes-vous sûr de vouloir supprimer cette ville?")) {
+//     this.apiService.deleteCity(city)
+//       .subscribe({
+//         //next: (data) => console.log(data),
+//         error: (err) => this.error = err.message,
+//         complete: () => (this.error = null),
+//       })
+//       this.router.navigateByUrl("hotels");
+
+//   }
+
+// }
 
 }

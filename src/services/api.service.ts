@@ -52,5 +52,8 @@ export class ApiService {
     return this.http.post<City>(environment.host+"/cities", newCity);
   }
 
+  public deleteCity(city:City){
+    return this.http.delete(environment.host+"/cities/"+city.id);
+  }
   }
 

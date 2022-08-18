@@ -113,3 +113,8 @@
 .row{
     flex-direction: row-reverse;
 }
+
+.btn-toolbar{
+    justify-content:space-around;
+    
+}
