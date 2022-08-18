@@ -75,8 +75,12 @@ this.listHotels=[];
 }
 
 onAdd(){
-  this.router.navigateByUrl("add");
+  this.router.navigateByUrl("addHotel");
     
   }
+
+onAddCity(){
+  this.router.navigateByUrl("addCity");
+}
 
 }

@@ -47,4 +47,10 @@ export class ApiService {
   public deleteHotel(hotel:Hotel){
     return this.http.delete(environment.host+"/hotels/"+hotel.id);
   }
-}
+
+  public saveNewCity (newCity:City){
+    return this.http.post<City>(environment.host+"/cities", newCity);
+  }
+
+  }
+
